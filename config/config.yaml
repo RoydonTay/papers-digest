@@ -1,0 +1,44 @@
+interest_areas:
+  - name: "LLM Alignment, Reasoning & RL"
+    weight: 1.0
+    keywords: [GRPO, DPO, PPO, RLHF, RLAIF, alignment, reasoning model,
+               chain-of-thought, reward model, preference optimization,
+               test-time compute, self-consistency]
+  - name: "Parameter-Efficient Fine-Tuning & Quantization"
+    weight: 1.0
+    keywords: [PEFT, LoRA, QLoRA, adapter, quantization, GPTQ, AWQ,
+               distillation, model compression, pruning, small language model, SLM]
+  - name: "Retrieval-Augmented Generation"
+    weight: 1.0
+    keywords: [RAG, retrieval-augmented, dense retrieval, vector search,
+               hybrid search, reranking, embedding model, knowledge graph, BM25]
+  - name: "Agentic AI & Conversational Systems"
+    weight: 1.0
+    keywords: [agent, tool use, function calling, multi-agent, ReAct,
+               intent recommendation, LLM-as-a-judge, LLM evaluation, benchmark, planning]
+  - name: "Multimodal & Vision-Language"
+    weight: 0.9
+    keywords: [vision-language, VLM, multimodal, object detection,
+               GroundingDINO, YOLO, open-vocabulary, image-text, visual grounding]
+  - name: "Quantitative & Financial ML"
+    weight: 1.0
+    keywords: [time series, forecasting, sentiment analysis, quantitative trading,
+               financial, alpha signal, market prediction, portfolio, risk model]
+
+scoring:
+  title_weight: 3.0
+  abstract_weight: 1.0
+  upvote_weight: 0.25
+  diminishing_returns: true
+  candidate_pool: 25
+  final_count: 10
+
+gemini:
+  model: "gemini-2.5-flash-lite"
+  fallback_model: "gemini-2.5-flash"
+
+fetch:
+  default_limit: 100
+
+state:
+  keep_weeks: 12

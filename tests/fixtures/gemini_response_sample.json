@@ -1,0 +1,13 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "[{\"index\": 2, \"rank\": 1, \"summary\": \"This paper introduces a retrieval-augmented method that combines dense retrieval with reranking to improve QA accuracy. Experiments show consistent gains over BM25 baselines.\", \"relevance_note\": \"Matches your Retrieval-Augmented Generation interest by proposing a new hybrid retrieval pipeline.\"}, {\"index\": 0, \"rank\": 2, \"summary\": \"The authors propose an agent framework that uses tool calling to solve multi-step tasks. They evaluate it on a suite of planning benchmarks.\", \"relevance_note\": \"Matches your Agentic AI interest by introducing a new tool-use agent architecture.\"}]"
+          }
+        ]
+      }
+    }
+  ]
+}
