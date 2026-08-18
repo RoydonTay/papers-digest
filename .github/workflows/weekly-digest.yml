@@ -27,14 +27,6 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Debug secrets/inputs
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          echo "event_name: ${{ github.event_name }}"
-          echo "inputs.dry_run (raw): '${{ inputs.dry_run }}'"
-          echo "github.event.inputs.dry_run (raw): '${{ github.event.inputs.dry_run }}'"
-          echo "GEMINI_API_KEY length: ${#GEMINI_API_KEY}"
       - name: Run digest
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -53,7 +45,7 @@ jobs:
             logs/
           retention-days: 14
       - name: Commit state
-        if: success() && inputs.dry_run != 'true'
+        if: success() && !inputs.dry_run
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
